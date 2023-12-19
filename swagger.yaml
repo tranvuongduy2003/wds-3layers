@@ -1,0 +1,31 @@
+tags:
+    - name: tasks
+      description: Everything about tasks
+paths:
+    /tasks:
+        get:
+            tags:
+                - tasks
+            summary: Get all tasks
+            description: Get all existing tasks
+            responses:
+                '200':
+                    description: OK
+                '500':
+                    description: Server error
+        post:
+            tags:
+                - tasks
+            summary: Add new tasks
+            description: Add new tasks
+            parameters:
+                - taskName: body
+                  description: body
+            responses:
+                '201':
+                    description: Created
+                '500':
+                    description: Server error
+schemes:
+    - https
+    - http
